@@ -1,16 +1,18 @@
-// import React from 'react';
-// import { ButtonProps } from '../interfaces';
+import React from 'react';
 
-// const Button: React.FC<ButtonProps> = ({ label, onClick, type = 'button' }) => {
-//     return (
-//         <button
-//             type={type}
-//             onClick={onClick}
-//             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-//         >
-//             {label}
-//         </button>
-//     );
-// };
+interface ButtonProps {
+  text: string;
+  onClick: () => void;
+}
 
-// export default Button;
+const Button: React.FC<ButtonProps> = ({ text, onClick }) => (
+  <button
+    onClick={onClick}
+    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+  >
+    {text}
+  </button>
+);
+
+export default Button;
+
