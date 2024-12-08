@@ -6,9 +6,8 @@ interface CardProps {
   image: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, description, image }) => (
+const Card: React.FC<CardProps> = ({ title, description, }) => (
   <div className="border p-4 rounded-lg">
-    <img src={image} alt={title} className="w-full h-40 object-cover rounded-md mb-4" />
     <h2 className="font-bold text-lg">{title}</h2>
     <p className="text-gray-600">{description}</p>
   </div>
